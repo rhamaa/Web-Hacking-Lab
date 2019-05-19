@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+ ubuntu_lab:
+  build: ./ubuntu
+  container_name: ubuntu_redis_ssrf
+  restart: on-failure
+  ports:  
+    - "1111:8080"
+    - "10024:22"
+  volumes:
+    - "./www:/www"
+ centos_lab:
+  build: ./centos
+  container_name: centos_redis_ssrf
+  restart: on-failure
+  privileged: true
+  ports:
+    - "2222:8080"
+    - "10025:22"
+  volumes:
+    - "./www:/www"
