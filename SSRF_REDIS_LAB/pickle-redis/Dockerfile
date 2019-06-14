@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 EXPOSE 3333
 
 ENTRYPOINT ["python"]
-CMD ["wwww/app.py"]
+CMD ["www/app.py"]
