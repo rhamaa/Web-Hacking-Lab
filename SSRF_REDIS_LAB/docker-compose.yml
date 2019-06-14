@@ -20,3 +20,11 @@ services:
     - "10025:22"
   volumes:
     - "./www:/www"
+ pickle_redis_lab:
+  build: ./pickle-redis
+  container_name: pickle_redis_ssrf
+  restart: on-failure
+  ports:
+    - "3333:3333"
+  volumes:
+    - "./www:/www"

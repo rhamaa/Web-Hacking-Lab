@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="icon" href="/img/favicon.ico">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+
+<div class="container" style="margin-top: 8%;">
+<div class="col-md-6 col-md-offset-3">
+<div class="row">
+<div id="logo" class="text-center">
+<h1>Login</h1>
+</div>
+<form action=" {{ url_for('login') }}" method="POST" role="form" id="form-buscar" enctype="multipart/form-data">
+<div class="form-group">
+<div class="input-group">
+<input id="1" class="form-control" type="text" name="username" placeholder="Username..." required/>
+<span class="input-group-btn">
+<button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-fetch" aria-hidden="true"></i>Login</button>
+</span>
+</div>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
